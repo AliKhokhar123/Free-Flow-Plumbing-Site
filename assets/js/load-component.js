@@ -20,7 +20,7 @@ $(document).ready(function () {
             const origin = window.location.origin;
             // console.log(origin)
             if(origin === 'https://alikhokhar123.github.io') {
-                img.src = `${window.location.origin}/lawnmowingservicecharlottenc/assets/images/${filename}`;
+                img.src = `${window.location.origin}/Free-Flow-Plumbing-Site/assets/images/${filename}`;
             }
             else{
                 img.src = `${window.location.origin}/assets/images/${filename}`;
@@ -32,7 +32,7 @@ $(document).ready(function () {
             const origin = window.location.origin;
             console.log(origin)
             if(origin === 'https://alikhokhar123.github.io') {
-                link.href = `${window.location.origin}/lawnmowingservicecharlottenc/${filename}`;
+                link.href = `${window.location.origin}/Free-Flow-Plumbing-Site/${filename}`;
             }
             else{
                 console.log("it works")
