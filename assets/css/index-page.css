@@ -495,14 +495,24 @@ body {
     border: 1px solid #242263;
     border-radius: 10px;
     overflow: hidden;
-    padding: 40px;
+    padding: 40px 20px;
     font-family: "Plus Jakarta Sans", sans-serif;
     height: 100%;
 }
 
 .review-card .top-image {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.image-review-right {
+    margin-left: 20px;
+}
+
+.image-review-right .heading {
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .review-card .top-image img {
@@ -513,7 +523,6 @@ body {
 
 .review-card .review-card-content {
     background-color: white;
-    text-align: center;
 }
 
 .review-card-content .heading {
@@ -523,7 +532,8 @@ body {
 
 .review-card-content .paragraph {
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .review-card-content button {
@@ -537,13 +547,47 @@ body {
 
 .review-stars {
     display: flex;
-    gap: 5px;
+    gap: 1px;
     justify-content: center;
-    margin: 15px 0px;
+    margin: -3px 0px;
 }
 
 .review-star img {
-    width: 20px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.review-stars-main-box {
+    display: flex;
+    gap: 10px;
+}
+
+.date {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.postedOnGoogleBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.postedOnGoogleBox .left img {
+    width: 37px;
+}
+
+.postedOnGoogleBox .right .postedOn {
+    color: gray;
+    font-size: 14px;
+    margin: 0;
+}
+
+.postedOnGoogleBox .right .google {
+    font-size: 17px;
+    margin: 0;
+    color: blue;
 }
 
 /* review-section-end */
