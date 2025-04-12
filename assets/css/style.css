@@ -5,3 +5,7 @@
     margin-right: auto;
     overflow: hidden;
 }
+
+.footer-socials a img {
+    width: 25px;
+}

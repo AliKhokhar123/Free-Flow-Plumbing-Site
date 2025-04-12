@@ -67,6 +67,7 @@ footer {
     grid-column-gap: 21px;
     grid-row-gap: 21px;
     display: flex;
+    align-items: center;
 }
 
 .footer-right p {
