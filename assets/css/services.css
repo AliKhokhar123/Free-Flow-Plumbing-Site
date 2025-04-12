@@ -1,5 +1,29 @@
-#general-landscaping {
-    background-image: url(../images/land-scaping-charlotte-bg.jpg) !important;
+#st-george {
+    background-image: url(../images/st-george/st-george-bg-image.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Washington {
+    background-image: url(../images/washington/washing-ton-bg.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Ivins {
+    background-image: url(../images/Ivins/Ivins-bg.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#santa-clara {
+    background-image: url(../images/santa-clara/santa_clara_bg.jpeg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Hurricane {
+    background-image: url(../images/hurricane/hurrican_bg.jpg) !important;
     background-repeat: no-repeat;
     background-size: cover;
 }
