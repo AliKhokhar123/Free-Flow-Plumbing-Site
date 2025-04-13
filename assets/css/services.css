@@ -1,3 +1,9 @@
+#general-landscaping {
+    background-image: url(../images/service-bg-img.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #st-george {
     background-image: url(../images/st-george/st-george-bg-image.jpg) !important;
     background-repeat: no-repeat;
