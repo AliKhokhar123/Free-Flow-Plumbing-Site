@@ -394,6 +394,8 @@ body {
 .service-card .top-image img {
     width: 100%;
     border-bottom: 1px solid #242263;
+    object-fit: cover;
+    height: 300px;
 }
 
 .service-card .service-card-content {
