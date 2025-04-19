@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port       = 587;
 
         $mail->setFrom('groundsmenwebsiteform@gmail.com', 'Free Flow Plumbing Quote Request');
-        $mail->addAddress('access@sustain-media.com');
+        $mail->addAddress('Freeflowutah@gmail.com');
 
         $mail->isHTML(true);
         $mail->Subject = 'NEW Plumbing Quote Request from Free Flow Website';

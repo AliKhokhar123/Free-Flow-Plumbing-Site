@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Sender & recipient
         $mail->setFrom('groundsmenwebsiteform@gmail.com', 'Free Flow Plumbing Quote Request');
-        $mail->addAddress('access@sustain-media.com');
+        $mail->addAddress('Freeflowutah@gmail.com');
 
         // Email body
         $mail->isHTML(true);
