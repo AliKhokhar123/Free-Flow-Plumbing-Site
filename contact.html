@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/footer-style.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
+<script type="text/javascript" src="//cdn.callrail.com/companies/609404092/69d90f69234c414915c7/12/swap.js"></script>
 <body>
 
     <div id="nav-placeholder"></div>
@@ -124,7 +125,7 @@
                             <div class="showMessage"></div>
     
                             <div class="form-button-box">
-                                <button type="submit">Submit</button>
+                                <button type="submit" id="contact-btn">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -153,3 +154,68 @@
     <script src="./assets/js/load-component.js"></script>
 </body>
 </html>
+
+<script>
+    $(document).ready(function () {
+        $('#contact-form').on('submit', function (e) {
+            e.preventDefault();
+    
+            // Clear previous messages
+            $('.showMessage').html('');
+    
+            // Collect values
+            let name = $('#name').val().trim();
+            let address = $('#address').val().trim();
+            let email = $('#email').val().trim();
+            let phone = $('#phone').val().trim();
+            let message = $('#message').val().trim();
+            let pageUrl = window.location.href;
+    
+            let services = [];
+            $("input[name='services[]']:checked").each(function () {
+                services.push($(this).val());
+            });
+    
+            // Validation
+            let errors = [];
+    
+            if (name === '') errors.push('Name is required.');
+            if (address === '') errors.push('Address is required.');
+            if (email === '' || !/^\S+@\S+\.\S+$/.test(email)) errors.push('Valid email is required.');
+            if (phone === '' || !/^\d{10,15}$/.test(phone.replace(/\D/g, ''))) errors.push('Valid phone number is required.');
+            if (message === '') errors.push('Message is required.');
+            if (message.length > 500) errors.push('Message must be less than 500 characters.');
+    
+            if (errors.length > 0) {
+                $('.showMessage').html('<div class="alert alert-danger">' + errors.join('<br>') + '</div>');
+                return;
+            }
+
+            $('#contact-btn').prop('disabled', true);
+    
+            $.ajax({
+                url: './assets/php/submit-form-contact.php',
+                method: 'POST',
+                data: {
+                    name: name,
+                    address: address,
+                    email: email,
+                    phone: phone,
+                    services: services,
+                    message: message,
+                    page_url: pageUrl
+                },
+                success: function (response) {
+                    $('.showMessage').html('<div class="alert alert-success">Thank you! Your request has been submitted.</div>');
+                    $('#contact-form')[0].reset();
+                    $('#contact-btn').prop('disabled', false);
+                },
+                error: function (xhr) {
+                    $('.showMessage').html('<div class="alert alert-danger">Something went wrong. Please try again later.</div>');
+                    $('#contact-btn').prop('disabled', false);
+                }
+            });
+        });
+    });
+    </script>
+    
